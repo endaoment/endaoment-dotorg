@@ -15,11 +15,7 @@ class Splash extends React.Component {
       <div>
         <HomePageWrapper>
           <FullscreenWrapper>
-            <HeaderLogo
-              alt="endaoment"
-              style={{ margin: "0 auto", maxWidth: "15rem" }}
-              src={endaoment}
-            ></HeaderLogo>
+            <HeaderLogo alt="endaoment" src={endaoment}></HeaderLogo>
             <p className="big-header">A better way to give.</p>
             <Subtitle>smart contract donor-advised funds</Subtitle>
             <ButtonBlock>
@@ -32,14 +28,16 @@ class Splash extends React.Component {
                 <i className="lock open icon" />
                 Request Access
               </a>
-              <a
-                className="ui button big blue"
-                style={{ margin: ".25rem" }}
-                href="https://rinkeby.endaoment.org"
-              >
-                <i className="ethereum icon" />
-                Test on Rinkeby
-              </a>
+              {typeof window.ethereum !== "undefined" ? (
+                <a
+                  className="ui button big blue"
+                  style={{ margin: ".25rem" }}
+                  href="https://rinkeby.endaoment.org"
+                >
+                  <i className="ethereum icon" />
+                  Test on Rinkeby
+                </a>
+              ) : null}
             </ButtonBlock>
             <BottomButton href="#about" className="ui button compact">
               <i className="arrow down icon" />
@@ -146,14 +144,16 @@ class Splash extends React.Component {
                   <i className="lock open icon" />
                   Request Access
                 </a>
-                <a
-                  className="ui button big blue"
-                  style={{ margin: ".25rem" }}
-                  href="https://rinkeby.endaoment.org"
-                >
-                  <i className="ethereum icon" />
-                  Test on Rinkeby
-                </a>
+                {typeof window.ethereum !== "undefined" ? (
+                  <a
+                    className="ui button big blue"
+                    style={{ margin: ".25rem" }}
+                    href="https://rinkeby.endaoment.org"
+                  >
+                    <i className="ethereum icon" />
+                    Test on Rinkeby
+                  </a>
+                ) : null}
               </ButtonBlock>
               <Header>Keep in touch</Header>
               <Subtitle>
@@ -335,16 +335,18 @@ const EmojiImage = styled.img`
 `;
 
 const BottomButton = styled.a`
-  position: absolute;
   margin: 0 auto;
-  bottom: calc(100% - 100vh + 5rem);
-  z-index: 1000;
+
+  @media only screen and (min-width: 811px) {
+    position: absolute;
+    bottom: calc(100% - 100vh + 5rem);
+  }
 `;
 
 const HeaderLogo = styled.img`
-  margin: 2rem auto;
-  top: calc(100% - 100vh + 7rem);
-  z-index: 1000;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  max-width: 15rem;
 `;
 
 const FullscreenWrapper = styled.div`
@@ -365,4 +367,5 @@ const FullscreenWrapper = styled.div`
     align-items: center;
     text-align: center;
     margin-top: 0rem;
+  }
 `;
