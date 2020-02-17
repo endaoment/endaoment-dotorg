@@ -342,8 +342,7 @@ const BottomButton = styled.a`
 `;
 
 const HeaderLogo = styled.img`
-  position: absolute;
-  margin: 0 auto;
+  margin: 2rem auto;
   top: calc(100% - 100vh + 7rem);
   z-index: 1000;
 `;
