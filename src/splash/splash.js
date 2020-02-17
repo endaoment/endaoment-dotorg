@@ -14,35 +14,38 @@ class Splash extends React.Component {
     return (
       <div>
         <HomePageWrapper>
-          <div className="fullscreen-wrapper">
-            <img
+          <FullscreenWrapper>
+            <HeaderLogo
               alt="endaoment"
-              style={{ maxWidth: "15rem" }}
+              style={{ margin: "0 auto", maxWidth: "15rem" }}
               src={endaoment}
-            ></img>
-            <p className="big-header">A new way to give.</p>
+            ></HeaderLogo>
+            <p className="big-header">A better way to give.</p>
             <Subtitle>smart contract donor-advised funds</Subtitle>
             <ButtonBlock>
-              <a href="#about" className="ui button compact">
-                Learn More
-              </a>
               <a
-                className="ui button compact green"
+                className="ui button big green"
+                style={{ margin: ".25rem" }}
                 target="blank"
                 href="./signup"
               >
-                Request Mainnet Access
+                <i className="lock open icon" />
+                Request Access
+              </a>
+              <a
+                className="ui button big blue"
+                style={{ margin: ".25rem" }}
+                href="https://rinkeby.endaoment.org"
+              >
+                <i className="ethereum icon" />
+                Test on Rinkeby
               </a>
             </ButtonBlock>
-
-            <a
-              className="ui button massive blue"
-              href="https://rinkeby.endaoment.org"
-            >
-              <i className="external alternarte icon" />
-              Test on Rinkeby
-            </a>
-          </div>
+            <BottomButton href="#about" className="ui button compact">
+              <i className="arrow down icon" />
+              Learn More
+            </BottomButton>
+          </FullscreenWrapper>
           <LearnMoreWrapper id="about">
             <SectionSubtitle>
               how{" "}
@@ -133,16 +136,29 @@ class Splash extends React.Component {
               </Subtitle>
             </SectionWrapper>
             <SectionWrapper>
-              <a
-                className="ui button massive green"
-                target="blank"
-                href="./signup"
-              >
-                Request Access
-              </a>
+              <ButtonBlock>
+                <a
+                  className="ui button big green"
+                  style={{ margin: ".25rem" }}
+                  target="blank"
+                  href="./signup"
+                >
+                  <i className="lock open icon" />
+                  Request Access
+                </a>
+                <a
+                  className="ui button big blue"
+                  style={{ margin: ".25rem" }}
+                  href="https://rinkeby.endaoment.org"
+                >
+                  <i className="ethereum icon" />
+                  Test on Rinkeby
+                </a>
+              </ButtonBlock>
               <Header>Keep in touch</Header>
               <Subtitle>
-                sign up to recieve notice when our public beta launches
+                sign up to recieve access to our public beta or take our alpha
+                for a spin on the Rinkeby test network
               </Subtitle>
             </SectionWrapper>
           </LearnMoreWrapper>
@@ -221,9 +237,10 @@ const SectionSubtitle = styled.p`
 
 const ButtonBlock = styled.div`
   display: flex;
+  flex-flow: wrap;
   justify-content: center;
-  margin: 2rem;
-  padding-bottom: 5rem;
+  align-items: center;
+  margin: 3rem;
 `;
 
 const LearnMoreWrapper = styled.div`
@@ -315,4 +332,38 @@ const EmojiImage = styled.img`
   height: auto;
   padding: 1rem 0rem 1rem 1rem;
   max-width: 30rem;
+`;
+
+const BottomButton = styled.a`
+  position: absolute;
+  margin: 0 auto;
+  bottom: calc(100% - 100vh + 5rem);
+  z-index: 1000;
+`;
+
+const HeaderLogo = styled.img`
+  position: absolute;
+  margin: 0 auto;
+  top: calc(100% - 100vh + 7rem);
+  z-index: 1000;
+`;
+
+const FullscreenWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1400px;
+  text-align: center;
+  margin-top: 30vh;
+
+  @media only screen and (max-width: 811px) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0rem;
 `;
