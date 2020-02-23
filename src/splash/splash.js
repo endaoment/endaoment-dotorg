@@ -64,8 +64,8 @@ class Splash extends React.Component {
                 <SmallLabel>STEP 1</SmallLabel>
                 <SectionHeader>Open a fund</SectionHeader>
                 <Subtitle>
-                  provide minimal basic info about yourself and we'll set up
-                  your new fund's smart contract in seconds
+                  provide basic info about yourself and we'll set up a new fund
+                  smart contract in seconds
                 </Subtitle>
               </ContentWrapper>
             </RightSectionWrapper>
@@ -245,7 +245,7 @@ const ButtonBlock = styled.div`
 
 const LearnMoreWrapper = styled.div`
   background-color: whitesmoke;
-  width: 1200px;
+  width: 1400px;
   max-width: 100vw;
   display: flex;
   flex-flow: column;
@@ -262,10 +262,11 @@ const LeftSectionWrapper = styled.div`
   justify-content: center;
   text-align: left;
   max-width: 100vw;
-  margin: 5rem auto;
+  margin: 7rem auto;
   padding: 1rem;
   @media only screen and (max-width: 811px) {
-    margin: 2rem auto;
+    margin: 4rem auto;
+    text-align: center;
   }
 `;
 
@@ -276,10 +277,11 @@ const RightSectionWrapper = styled.div`
   justify-content: center;
   text-align: left;
   max-width: 100vw;
-  margin: 5rem auto;
+  margin: 7rem auto;
   padding: 1rem;
   @media only screen and (max-width: 811px) {
-    margin: 2rem auto;
+    margin: 4rem auto;
+    text-align: center;
   }
 `;
 
@@ -291,10 +293,10 @@ const SectionWrapper = styled.div`
   text-align: center;
   width: 800px;
   max-width: 100vw;
-  margin: 5rem auto;
+  margin: 7rem auto;
   padding: 2rem;
   @media only screen and (max-width: 811px) {
-    margin: 2rem auto;
+    margin: 4rem auto;
   }
 `;
 
@@ -317,6 +319,7 @@ const SectionHeader = styled.p`
   @media only screen and (max-width: 811px) {
     font-size: 2rem;
     padding-bottom: 1rem;
+    text-align: center;
   }
 `;
 
@@ -331,7 +334,7 @@ const EmojiImage = styled.img`
   width: 100vw;
   height: auto;
   padding: 1rem 0rem 1rem 1rem;
-  max-width: 30rem;
+  max-width: 50rem;
 `;
 
 const BottomButton = styled.a`
