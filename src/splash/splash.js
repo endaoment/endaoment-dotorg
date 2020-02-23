@@ -333,7 +333,7 @@ const ContentWrapper = styled.div`
 const EmojiImage = styled.img`
   width: 100vw;
   height: auto;
-  padding: 1rem 0rem 1rem 1rem;
+  padding: 0 0.5rem;
   max-width: 50rem;
 `;
 
