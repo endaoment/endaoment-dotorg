@@ -7,7 +7,6 @@ import fund from "../assets/images/fund.png";
 import tax from "../assets/images/tax.png";
 import endaomentfund from "../assets/images/endaomentfund.png";
 import styled from "styled-components";
-import "./splash.scss";
 
 class Splash extends React.Component {
   render() {
@@ -16,7 +15,7 @@ class Splash extends React.Component {
         <HomePageWrapper>
           <FullscreenWrapper>
             <HeaderLogo alt="endaoment" src={endaoment}></HeaderLogo>
-            <p className="big-header">A better way to give.</p>
+            <BigHeader className="big-header">A better way to give.</BigHeader>
             <Subtitle>smart contract donor-advised funds</Subtitle>
             <ButtonBlock>
               <a
@@ -218,6 +217,19 @@ const Header = styled.p`
   }
 `;
 
+const BigHeader = styled.p`
+  font-family: all-round-gothic;
+  font-weight: 400;
+  font-size: 5rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  @media only screen and (max-width: 768px) {
+    margin-top: 1rem;
+    font-size: 4rem;
+    padding: 0.5rem;
+  }
+`;
+
 const Subtitle = styled.p`
   font-family: all-round-gothic;
   font-weight: 400;
@@ -265,7 +277,7 @@ const LeftSectionWrapper = styled.div`
   margin: 7rem auto;
   padding: 1rem;
   @media only screen and (max-width: 811px) {
-    margin: 4rem auto;
+    margin: 1rem auto;
     text-align: center;
   }
 `;
@@ -280,7 +292,7 @@ const RightSectionWrapper = styled.div`
   margin: 7rem auto;
   padding: 1rem;
   @media only screen and (max-width: 811px) {
-    margin: 4rem auto;
+    margin: 1rem auto;
     text-align: center;
   }
 `;
@@ -294,9 +306,9 @@ const SectionWrapper = styled.div`
   width: 800px;
   max-width: 100vw;
   margin: 7rem auto;
-  padding: 2rem;
+  padding: 1rem;
   @media only screen and (max-width: 811px) {
-    margin: 4rem auto;
+    margin: 1rem auto;
   }
 `;
 
