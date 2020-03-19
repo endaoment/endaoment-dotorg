@@ -63,8 +63,8 @@ class Splash extends React.Component {
                 <SmallLabel>STEP 1</SmallLabel>
                 <SectionHeader>Open a fund</SectionHeader>
                 <Subtitle>
-                  provide basic info about yourself and we'll set up a new fund
-                  smart contract in seconds
+                  provide basic info about yourself and we'll create your
+                  on-chain donor-advised fund in seconds
                 </Subtitle>
               </ContentWrapper>
             </RightSectionWrapper>
@@ -74,8 +74,8 @@ class Splash extends React.Component {
                 <SmallLabel>STEP 2</SmallLabel>
                 <SectionHeader>Give some crypto</SectionHeader>
                 <Subtitle>
-                  funds accept any token with a Uniswap exchange contract and
-                  are traded by{" "}
+                  contribute any token with a Uniswap exchange contract to your
+                  fund and{" "}
                   <span
                     style={{
                       fontFamily: "all-round-gothic",
@@ -84,7 +84,7 @@ class Splash extends React.Component {
                   >
                     endaoment
                   </span>{" "}
-                  for USDC when donated
+                  will convert it to USDC
                 </Subtitle>
               </ContentWrapper>
             </LeftSectionWrapper>
@@ -92,9 +92,9 @@ class Splash extends React.Component {
               <EmojiImage alt="grant" src={grant}></EmojiImage>
               <ContentWrapper>
                 <SmallLabel>STEP 3</SmallLabel>
-                <SectionHeader>Offer grants</SectionHeader>
+                <SectionHeader>Reccomend grants</SectionHeader>
                 <Subtitle>
-                  use the proceeds of your donations to make grant
+                  use the proceeds of your contributions to make grant
                   reccomendations to any non-profit organization (some
                   restrictions apply)
                 </Subtitle>
@@ -104,23 +104,31 @@ class Splash extends React.Component {
               <EmojiImage alt="Orgs" src={orgs}></EmojiImage>
               <Header>Orgs recieve USDC</Header>
               <Subtitle>
-                approved grants are easily transfered out to US bank accounts by
-                an organization's leadership
+                approved grants are safely transferred by{" "}
+                <span
+                  style={{
+                    fontFamily: "all-round-gothic",
+                    fontWeight: "600"
+                  }}
+                >
+                  endaoment
+                </span>{" "}
+                to the organization's verified leadership
               </Subtitle>
             </SectionWrapper>
             <SectionWrapper>
               <EmojiImage alt="Taxes" src={tax}></EmojiImage>
               <Header>Minimize your taxes</Header>
               <Subtitle>
-                contribute your long-term capital gains holdings for maximum
-                deductions
+                contribute long-term capital gains holdings without creating
+                taxable events
               </Subtitle>
             </SectionWrapper>
             <SectionWrapper>
               <EmojiImage alt="Endaoment Fund" src={endaomentfund}></EmojiImage>
               <Header>Coming Soon...</Header>
               <Subtitle>
-                a community philanthropic DAO governed by you:{" "}
+                a community philanthropic endowment fund governed in part by{" "}
                 <span
                   style={{
                     fontFamily: "all-round-gothic",
@@ -129,7 +137,7 @@ class Splash extends React.Component {
                 >
                   endaoment
                 </span>
-                's primary advisors
+                's users
               </Subtitle>
             </SectionWrapper>
             <SectionWrapper>
