@@ -50,7 +50,7 @@ class Splash extends React.Component {
                 style={{
                   fontFamily: "all-round-gothic",
                   fontWeight: "600",
-                  fontSize: "1.5rem"
+                  fontSize: "1.5rem",
                 }}
               >
                 endaoment
@@ -79,7 +79,7 @@ class Splash extends React.Component {
                   <span
                     style={{
                       fontFamily: "all-round-gothic",
-                      fontWeight: "600"
+                      fontWeight: "600",
                     }}
                   >
                     endaoment
@@ -92,7 +92,7 @@ class Splash extends React.Component {
               <EmojiImage alt="grant" src={grant}></EmojiImage>
               <ContentWrapper>
                 <SmallLabel>STEP 3</SmallLabel>
-                <SectionHeader>Reccomend grants</SectionHeader>
+                <SectionHeader>Recommend grants</SectionHeader>
                 <Subtitle>
                   use the proceeds of your contributions to make grant
                   reccomendations to any non-profit organization (some
@@ -108,7 +108,7 @@ class Splash extends React.Component {
                 <span
                   style={{
                     fontFamily: "all-round-gothic",
-                    fontWeight: "600"
+                    fontWeight: "600",
                   }}
                 >
                   endaoment
@@ -132,7 +132,7 @@ class Splash extends React.Component {
                 <span
                   style={{
                     fontFamily: "all-round-gothic",
-                    fontWeight: "600"
+                    fontWeight: "600",
                   }}
                 >
                   endaoment
