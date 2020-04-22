@@ -38,7 +38,7 @@ class Splash extends React.Component {
                 </a>
               ) : null}
             </ButtonBlock>
-            <BottomButton href="#about" className="ui button compact">
+            <BottomButton href="#about" className="ui button basic compact">
               <i className="arrow down icon" />
               Learn More
             </BottomButton>
@@ -265,7 +265,7 @@ const ButtonBlock = styled.div`
 
 const LearnMoreWrapper = styled.div`
   background-color: whitesmoke;
-  width: 1400px;
+  width: 1000px;
   max-width: 100vw;
   display: flex;
   flex-flow: column;
@@ -354,7 +354,7 @@ const EmojiImage = styled.img`
   width: 100vw;
   height: auto;
   padding: 0 0.5rem;
-  max-width: 50rem;
+  max-width: 30rem;
 `;
 
 const BottomButton = styled.a`
