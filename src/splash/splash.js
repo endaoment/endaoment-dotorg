@@ -95,7 +95,7 @@ class Splash extends React.Component {
                 <SectionHeader>Recommend grants</SectionHeader>
                 <Subtitle>
                   use the proceeds of your contributions to make grant
-                  reccomendations to any non-profit organization (some
+                  recommendations to any non-profit organization (some
                   restrictions apply)
                 </Subtitle>
               </ContentWrapper>
