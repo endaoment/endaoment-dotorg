@@ -214,7 +214,6 @@ const HomePageWrapper = styled.div`
 `;
 
 const Header = styled.p`
-  font-family: all-round-gothic;
   font-weight: 400;
   font-size: 4rem;
   margin-top: 3rem;
@@ -239,7 +238,6 @@ const BigHeader = styled.p`
 `;
 
 const Subtitle = styled.p`
-  font-family: all-round-gothic;
   font-weight: 400;
   font-size: 1.5rem;
   margin-top: -3rem;
@@ -250,7 +248,6 @@ const Subtitle = styled.p`
 `;
 
 const SectionSubtitle = styled.p`
-  font-family: all-round-gothic;
   font-weight: 400;
   font-size: 1.5rem;
 `;
@@ -332,7 +329,6 @@ const SmallLabel = styled.p`
 `;
 
 const SectionHeader = styled.p`
-  font-family: all-round-gothic;
   font-weight: 400;
   font-size: 4rem;
   text-align: left;
