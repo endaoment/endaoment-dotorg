@@ -1,4 +1,7 @@
 import React from "react";
+import styled from "styled-components";
+import ReactGA from "react-ga";
+
 import endaoment from "../assets/images/endaoment.svg";
 import orgs from "../assets/images/orgs.png";
 import grant from "../assets/images/grant.png";
@@ -6,10 +9,11 @@ import contribute from "../assets/images/contribute.png";
 import fund from "../assets/images/fund.png";
 import tax from "../assets/images/tax.png";
 import endaomentfund from "../assets/images/endaomentfund.png";
-import styled from "styled-components";
 
 class Splash extends React.Component {
   render() {
+    ReactGA.initialize("UA-164846205-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
     return (
       <div>
         <HomePageWrapper>
