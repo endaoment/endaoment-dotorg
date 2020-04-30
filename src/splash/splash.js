@@ -19,8 +19,8 @@ class Splash extends React.Component {
         <HomePageWrapper>
           <FullscreenWrapper>
             <HeaderLogo alt="endaoment" src={endaoment}></HeaderLogo>
-            <BigHeader className="big-header">A better way to give.</BigHeader>
-            <Subtitle>smart contract donor-advised funds</Subtitle>
+            <BigHeader className="big-header">A better way to give</BigHeader>
+            <Subtitle>Smart Contract Donor-Advised Funds</Subtitle>
             <ButtonBlock>
               <a
                 className="ui button big green"
@@ -67,7 +67,7 @@ class Splash extends React.Component {
                 <SmallLabel>STEP 1</SmallLabel>
                 <SectionHeader>Open a fund</SectionHeader>
                 <Subtitle>
-                  provide basic info about yourself and we'll create your
+                  Provide basic info about yourself and we'll create your
                   on-chain donor-advised fund in seconds
                 </Subtitle>
               </ContentWrapper>
@@ -78,7 +78,7 @@ class Splash extends React.Component {
                 <SmallLabel>STEP 2</SmallLabel>
                 <SectionHeader>Give some crypto</SectionHeader>
                 <Subtitle>
-                  contribute any token with a Uniswap exchange contract to your
+                  Contribute any token with a Uniswap exchange contract to your
                   fund and{" "}
                   <span
                     style={{
@@ -98,7 +98,7 @@ class Splash extends React.Component {
                 <SmallLabel>STEP 3</SmallLabel>
                 <SectionHeader>Recommend grants</SectionHeader>
                 <Subtitle>
-                  use the proceeds of your contributions to make grant
+                  Use the proceeds of your contributions to make grant
                   recommendations to any non-profit organization (some
                   restrictions apply)
                 </Subtitle>
@@ -108,7 +108,7 @@ class Splash extends React.Component {
               <EmojiImage alt="Orgs" src={orgs}></EmojiImage>
               <Header>Orgs recieve USDC</Header>
               <Subtitle>
-                approved grants are safely transferred by{" "}
+                Approved grants are safely transferred by{" "}
                 <span
                   style={{
                     fontFamily: "all-round-gothic",
@@ -124,7 +124,7 @@ class Splash extends React.Component {
               <EmojiImage alt="Taxes" src={tax}></EmojiImage>
               <Header>Minimize your taxes</Header>
               <Subtitle>
-                contribute long-term capital gains holdings without creating
+                Contribute long-term capital gains holdings without creating
                 taxable events
               </Subtitle>
             </SectionWrapper>
@@ -132,7 +132,7 @@ class Splash extends React.Component {
               <EmojiImage alt="Endaoment Fund" src={endaomentfund}></EmojiImage>
               <Header>Coming Soon...</Header>
               <Subtitle>
-                a community philanthropic endowment fund governed in part by{" "}
+                A community philanthropic endowment fund governed in part by{" "}
                 <span
                   style={{
                     fontFamily: "all-round-gothic",
@@ -168,34 +168,38 @@ class Splash extends React.Component {
               </ButtonBlock>
               <Header>Keep in touch</Header>
               <Subtitle>
-                sign up to recieve access to our public beta or take our alpha
+                Sign up to recieve access to our public beta or take our alpha
                 for a spin on the Rinkeby test network
               </Subtitle>
             </SectionWrapper>
           </LearnMoreWrapper>
-          <img
-            alt="endaoment"
-            style={{ maxWidth: "10rem", margin: "0 auto" }}
-            src={endaoment}
-          ></img>
-          <ButtonBlock>
-            <a
-              href="http://twitter.com/endaomentdotorg"
-              target="new"
-              className="ui button compact twitter"
-            >
-              <i className="twitter icon"></i>
-              Follow
-            </a>
+          <Footer>
+            <SectionWrapper>
+              <EmojiImage
+                alt="endaoment"
+                style={{ maxWidth: "10rem", margin: "0 auto" }}
+                src={endaoment}
+              />
+              <ButtonBlock>
+                <a
+                  href="http://twitter.com/endaomentdotorg"
+                  target="new"
+                  className="ui button compact twitter"
+                >
+                  <i className="twitter icon"></i>
+                  Follow
+                </a>
 
-            <a
-              href="medium.com/endaomentdotorg"
-              className="ui button compact disabled"
-            >
-              <i className="medium m icon"></i>
-              Read More
-            </a>
-          </ButtonBlock>
+                <a
+                  href="medium.com/endaomentdotorg"
+                  className="ui button compact disabled"
+                >
+                  <i className="medium m icon"></i>
+                  Read More
+                </a>
+              </ButtonBlock>
+            </SectionWrapper>
+          </Footer>
         </HomePageWrapper>
       </div>
     );
@@ -210,7 +214,7 @@ const HomePageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
   padding-left: 2rem;
   padding-right: 2rem;
   width: 100%;
@@ -314,7 +318,7 @@ const SectionWrapper = styled.div`
   text-align: center;
   width: 800px;
   max-width: 100vw;
-  margin: 7rem auto;
+  margin: 5rem auto;
   padding: 1rem;
   @media only screen and (max-width: 811px) {
     margin: 1rem auto;
@@ -380,7 +384,7 @@ const FullscreenWrapper = styled.div`
   align-items: center;
   max-width: 1400px;
   text-align: center;
-  margin-top: 30vh;
+  margin-top: 20vh;
 
   @media only screen and (max-width: 811px) {
     height: 100vh;
@@ -391,4 +395,14 @@ const FullscreenWrapper = styled.div`
     text-align: center;
     margin-top: 0rem;
   }
+`;
+
+const Footer = styled.div`
+  background-color: white;
+  padding-top: 2rem;
+  width: 100vw;
+  dispay: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
