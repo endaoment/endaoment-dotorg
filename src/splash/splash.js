@@ -183,7 +183,7 @@ class Splash extends React.Component {
               <ButtonBlock>
                 <a
                   href="http://twitter.com/endaomentdotorg"
-                  target="new"
+                  target="blank"
                   className="ui button compact twitter"
                 >
                   <i className="twitter icon"></i>
@@ -191,11 +191,21 @@ class Splash extends React.Component {
                 </a>
 
                 <a
-                  href="medium.com/endaomentdotorg"
+                  href="http://medium.com/endaomentdotorg"
                   className="ui button compact disabled"
+                  target="blank"
                 >
                   <i className="medium m icon"></i>
                   Read More
+                </a>
+
+                <a
+                  href="http://github.com/rheeger/endaoment-client"
+                  className="ui button compact black"
+                  target="blank"
+                >
+                  <i className="github icon"></i>
+                  GitHub
                 </a>
               </ButtonBlock>
             </SectionWrapper>
@@ -214,7 +224,6 @@ const HomePageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 0rem;
   padding-left: 2rem;
   padding-right: 2rem;
   width: 100%;
