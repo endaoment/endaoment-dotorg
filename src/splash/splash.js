@@ -51,7 +51,7 @@ class Splash extends React.Component {
           <LearnMoreWrapper id="about">
             <SectionLabel style={{ backgroundColor: "white" }}>
               <SectionSubtitle>
-                <Label basic size="medium" color="grey">
+                <Label basic size="large" color="grey">
                   getting started on{" "}
                   <span
                     style={{
@@ -110,7 +110,7 @@ class Splash extends React.Component {
             <RightSectionWrapper></RightSectionWrapper>
             <SectionLabel>
               <SectionSubtitle>
-                <Label basic size="medium" color="grey">
+                <Label basic size="large" color="grey">
                   understanding{" "}
                   <span
                     style={{
@@ -163,9 +163,10 @@ class Splash extends React.Component {
                 's users
               </Subtitle>
             </SectionWrapper>
+            <SectionWrapper></SectionWrapper>
             <SectionLabel style={{ width: "80vw", backgroundColor: "white" }}>
               <SectionSubtitle>
-                <Label basic size="medium" color="grey">
+                <Label basic size="large" color="grey">
                   contact us
                 </Label>
               </SectionSubtitle>
@@ -186,7 +187,7 @@ class Splash extends React.Component {
               </Subtitle>
               <ButtonBlock>
                 <a
-                  className="ui button medium green"
+                  className="ui button big green"
                   style={{ margin: ".25rem" }}
                   target="blank"
                   href="./signup"
@@ -196,7 +197,7 @@ class Splash extends React.Component {
                 </a>
                 {typeof window.ethereum !== "undefined" ? (
                   <a
-                    className="ui button medium blue"
+                    className="ui button big blue"
                     style={{ margin: ".25rem" }}
                     href="https://rinkeby.endaoment.org"
                   >
@@ -460,7 +461,6 @@ const FullscreenWrapper = styled.div`
 const Footer = styled.div`
   background-color: white;
   box-shadow: 0 15px 30px 1px grey;
-  border-top: 1px dashed grey;
   padding: 2rem 0 1rem 0;
   width: 100vw;
   dispay: flex;
