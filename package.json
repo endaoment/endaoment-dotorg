@@ -10,6 +10,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
     "react-typeform-embed": "^0.2.1",
+    "semantic-ui-react": "^0.88.2",
     "serve": "^11.3.0",
     "styled-components": "^5.0.1"
   },

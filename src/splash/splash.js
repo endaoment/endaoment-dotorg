@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ReactGA from "react-ga";
+import { Label } from "semantic-ui-react";
 
 import endaoment from "../assets/images/endaoment.svg";
 import orgs from "../assets/images/orgs.png";
@@ -19,7 +20,7 @@ class Splash extends React.Component {
         <HomePageWrapper>
           <FullscreenWrapper>
             <HeaderLogo alt="endaoment" src={endaoment}></HeaderLogo>
-            <BigHeader className="big-header">A better way to give</BigHeader>
+            <BigHeader className="big-header">a better way to give</BigHeader>
             <Subtitle>Smart Contract Donor-Advised Funds</Subtitle>
             <ButtonBlock>
               <a
@@ -48,19 +49,21 @@ class Splash extends React.Component {
             </BottomButton>
           </FullscreenWrapper>
           <LearnMoreWrapper id="about">
-            <SectionSubtitle>
-              how{" "}
-              <span
-                style={{
-                  fontFamily: "all-round-gothic",
-                  fontWeight: "600",
-                  fontSize: "1.5rem",
-                }}
-              >
-                endaoment
-              </span>{" "}
-              works:
-            </SectionSubtitle>
+            <SectionLabel style={{ backgroundColor: "white" }}>
+              <SectionSubtitle>
+                <Label basic size="medium" color="grey">
+                  getting started on{" "}
+                  <span
+                    style={{
+                      fontFamily: "all-round-gothic",
+                      fontWeight: "600",
+                    }}
+                  >
+                    endaoment
+                  </span>{" "}
+                </Label>
+              </SectionSubtitle>
+            </SectionLabel>
             <RightSectionWrapper>
               <EmojiImage alt="fund" src={fund}></EmojiImage>
               <ContentWrapper>
@@ -76,7 +79,7 @@ class Splash extends React.Component {
               <EmojiImage alt="contribute" src={contribute}></EmojiImage>
               <ContentWrapper>
                 <SmallLabel>STEP 2</SmallLabel>
-                <SectionHeader>Give some crypto</SectionHeader>
+                <SectionHeader>Give crypto</SectionHeader>
                 <Subtitle>
                   Contribute any token with a Uniswap exchange contract to your
                   fund and{" "}
@@ -104,6 +107,22 @@ class Splash extends React.Component {
                 </Subtitle>
               </ContentWrapper>
             </RightSectionWrapper>
+            <RightSectionWrapper></RightSectionWrapper>
+            <SectionLabel>
+              <SectionSubtitle>
+                <Label basic size="medium" color="grey">
+                  understanding{" "}
+                  <span
+                    style={{
+                      fontFamily: "all-round-gothic",
+                      fontWeight: "600",
+                    }}
+                  >
+                    endaoment
+                  </span>
+                </Label>
+              </SectionSubtitle>
+            </SectionLabel>
             <SectionWrapper>
               <EmojiImage alt="Orgs" src={orgs}></EmojiImage>
               <Header>Orgs recieve USDC</Header>
@@ -130,7 +149,7 @@ class Splash extends React.Component {
             </SectionWrapper>
             <SectionWrapper>
               <EmojiImage alt="Endaoment Fund" src={endaomentfund}></EmojiImage>
-              <Header>Coming Soon...</Header>
+              <Header>Coming soon...</Header>
               <Subtitle>
                 A community philanthropic endowment fund governed in part by{" "}
                 <span
@@ -144,10 +163,30 @@ class Splash extends React.Component {
                 's users
               </Subtitle>
             </SectionWrapper>
-            <SectionWrapper>
+            <SectionLabel style={{ width: "80vw", backgroundColor: "white" }}>
+              <SectionSubtitle>
+                <Label basic size="medium" color="grey">
+                  contact us
+                </Label>
+              </SectionSubtitle>
+            </SectionLabel>
+            <SectionWrapper
+              style={{
+                width: "80vw",
+                backgroundColor: "white",
+                margin: "0rem",
+              }}
+            >
+              <SectionHeader basic size="medium" color="grey">
+                Want more?
+              </SectionHeader>
+              <Subtitle>
+                Sign-up for access to the mainnet beta or try out our latest app
+                via the Rinkeby test network
+              </Subtitle>
               <ButtonBlock>
                 <a
-                  className="ui button big green"
+                  className="ui button medium green"
                   style={{ margin: ".25rem" }}
                   target="blank"
                   href="./signup"
@@ -157,7 +196,7 @@ class Splash extends React.Component {
                 </a>
                 {typeof window.ethereum !== "undefined" ? (
                   <a
-                    className="ui button big blue"
+                    className="ui button medium blue"
                     style={{ margin: ".25rem" }}
                     href="https://rinkeby.endaoment.org"
                   >
@@ -166,21 +205,16 @@ class Splash extends React.Component {
                   </a>
                 ) : null}
               </ButtonBlock>
-              <Header>Keep in touch</Header>
-              <Subtitle>
-                Sign up to recieve access to our public beta or take our alpha
-                for a spin on the Rinkeby test network
-              </Subtitle>
             </SectionWrapper>
           </LearnMoreWrapper>
           <Footer>
-            <SectionWrapper>
+            <SectionWrapper style={{ padding: "0rem" }}>
               <EmojiImage
                 alt="endaoment"
                 style={{ maxWidth: "10rem", margin: "0 auto" }}
                 src={endaoment}
               />
-              <ButtonBlock>
+              <ButtonBlock style={{ padding: "0rem", width: "100vw" }}>
                 <a
                   href="http://twitter.com/endaomentdotorg"
                   target="blank"
@@ -265,8 +299,13 @@ const Subtitle = styled.p`
 `;
 
 const SectionSubtitle = styled.p`
+  margin: 5rem;
   font-weight: 400;
   font-size: 1.5rem;
+  width: 100vw;
+  @media only screen and (max-width: 811px) {
+    font-size: 1rem;
+  }
 `;
 
 const ButtonBlock = styled.div`
@@ -274,47 +313,58 @@ const ButtonBlock = styled.div`
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
-  margin: 3rem;
+  margin: 2rem auto;
 `;
 
 const LearnMoreWrapper = styled.div`
   background-color: whitesmoke;
-  width: 1000px;
-  max-width: 100vw;
+  width: 100vw;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
+  padding-bottom: 5rem;
 `;
 
 const LeftSectionWrapper = styled.div`
+  background-color: white;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  text-align: left;
-  max-width: 100vw;
-  margin: 7rem auto;
-  padding: 1rem;
+  text-align: right;
+  width: 100vw;
+  padding: 2.5rem;
   @media only screen and (max-width: 811px) {
-    margin: 1rem auto;
+    text-align: center;
+  }
+`;
+const SectionLabel = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding-top: 5rem;
+  @media only screen and (max-width: 811px) {
     text-align: center;
   }
 `;
 
 const RightSectionWrapper = styled.div`
+  background-color: white;
   display: flex;
   flex-flow: wrap;
   align-items: center;
   justify-content: center;
   text-align: left;
-  max-width: 100vw;
-  margin: 7rem auto;
-  padding: 1rem;
+  width: 100vw;
+  margin: 0rem auto;
+  padding: 2.5rem;
   @media only screen and (max-width: 811px) {
-    margin: 1rem auto;
     text-align: center;
   }
 `;
@@ -325,10 +375,9 @@ const SectionWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 800px;
-  max-width: 100vw;
-  margin: 5rem auto;
-  padding: 1rem;
+  width: 100vw;
+  padding: 2.5rem;
+  margin: 2.5rem auto;
   @media only screen and (max-width: 811px) {
     margin: 1rem auto;
   }
@@ -348,7 +397,6 @@ const SmallLabel = styled.p`
 const SectionHeader = styled.p`
   font-weight: 400;
   font-size: 4rem;
-  text-align: left;
   @media only screen and (max-width: 811px) {
     font-size: 2rem;
     padding-bottom: 1rem;
@@ -368,6 +416,10 @@ const EmojiImage = styled.img`
   height: auto;
   padding: 0 0.5rem;
   max-width: 30rem;
+  margin-left: 4rem;
+  @media only screen and (max-width: 811px) {
+    margin-left: 0;
+  }
 `;
 
 const BottomButton = styled.a`
@@ -405,10 +457,11 @@ const FullscreenWrapper = styled.div`
     margin-top: 0rem;
   }
 `;
-
 const Footer = styled.div`
   background-color: white;
-  padding-top: 2rem;
+  box-shadow: 0 15px 30px 1px grey;
+  border-top: 1px dashed grey;
+  padding: 2rem 0 1rem 0;
   width: 100vw;
   dispay: flex;
   flex-direction: row;
