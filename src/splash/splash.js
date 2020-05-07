@@ -124,7 +124,7 @@ class Splash extends React.Component {
               </SectionSubtitle>
             </SectionLabel>
             <SectionWrapper>
-              <EmojiImage alt="Orgs" src={orgs}></EmojiImage>
+              <CenteredEmojiImage alt="Orgs" src={orgs}></CenteredEmojiImage>
               <Header>Orgs recieve USDC</Header>
               <Subtitle>
                 Approved grants are safely transferred by{" "}
@@ -140,7 +140,7 @@ class Splash extends React.Component {
               </Subtitle>
             </SectionWrapper>
             <SectionWrapper>
-              <EmojiImage alt="Taxes" src={tax}></EmojiImage>
+              <CenteredEmojiImage alt="Taxes" src={tax}></CenteredEmojiImage>
               <Header>Minimize your taxes</Header>
               <Subtitle>
                 Contribute long-term capital gains holdings without creating
@@ -148,7 +148,10 @@ class Splash extends React.Component {
               </Subtitle>
             </SectionWrapper>
             <SectionWrapper>
-              <EmojiImage alt="Endaoment Fund" src={endaomentfund}></EmojiImage>
+              <CenteredEmojiImage
+                alt="Endaoment Fund"
+                src={endaomentfund}
+              ></CenteredEmojiImage>
               <Header>Coming soon...</Header>
               <Subtitle>
                 A community philanthropic endowment fund governed in part by{" "}
@@ -210,7 +213,7 @@ class Splash extends React.Component {
           </LearnMoreWrapper>
           <Footer>
             <SectionWrapper style={{ padding: "0rem" }}>
-              <EmojiImage
+              <CenteredEmojiImage
                 alt="endaoment"
                 style={{ maxWidth: "10rem", margin: "0 auto" }}
                 src={endaoment}
@@ -418,6 +421,15 @@ const EmojiImage = styled.img`
   padding: 0 0.5rem;
   max-width: 30rem;
   margin-left: 4rem;
+  @media only screen and (max-width: 811px) {
+    margin-left: 0;
+  }
+`;
+const CenteredEmojiImage = styled.img`
+  width: 100vw;
+  height: auto;
+  padding: 0 0.5rem;
+  max-width: 30rem;
   @media only screen and (max-width: 811px) {
     margin-left: 0;
   }
