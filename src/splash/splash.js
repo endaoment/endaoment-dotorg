@@ -50,24 +50,16 @@ class Splash extends React.Component {
           </FullscreenWrapper>
           <LearnMoreWrapper id="about">
             <SectionLabel style={{ backgroundColor: "white" }}>
-              <SectionSubtitle>
-                <Label basic size="large" color="grey">
-                  getting started on{" "}
-                  <span
-                    style={{
-                      fontFamily: "all-round-gothic",
-                      fontWeight: "600",
-                    }}
-                  >
-                    endaoment
-                  </span>{" "}
-                </Label>
-              </SectionSubtitle>
+              <Header>
+                The easiest way to support your favorite causes with crypto.
+              </Header>
             </SectionLabel>
             <RightSectionWrapper>
               <EmojiImage alt="fund" src={fund}></EmojiImage>
               <ContentWrapper>
-                <SmallLabel>STEP 1</SmallLabel>
+                <Label basic size="tiny" color="black">
+                  STEP 1
+                </Label>
                 <SectionHeader>Open a fund</SectionHeader>
                 <Subtitle>
                   Provide basic info about yourself and we'll create your
@@ -78,7 +70,9 @@ class Splash extends React.Component {
             <LeftSectionWrapper>
               <EmojiImage alt="contribute" src={contribute}></EmojiImage>
               <ContentWrapper>
-                <SmallLabel>STEP 2</SmallLabel>
+                <Label basic size="tiny" color="black">
+                  STEP 2
+                </Label>
                 <SectionHeader>Give crypto</SectionHeader>
                 <Subtitle>
                   Contribute any token with a Uniswap exchange contract to your
@@ -98,7 +92,9 @@ class Splash extends React.Component {
             <RightSectionWrapper>
               <EmojiImage alt="grant" src={grant}></EmojiImage>
               <ContentWrapper>
-                <SmallLabel>STEP 3</SmallLabel>
+                <Label basic size="tiny" color="black">
+                  STEP 3
+                </Label>
                 <SectionHeader>Recommend grants</SectionHeader>
                 <Subtitle>
                   Use the proceeds of your contributions to make grant
@@ -109,9 +105,44 @@ class Splash extends React.Component {
             </RightSectionWrapper>
             <RightSectionWrapper></RightSectionWrapper>
             <SectionLabel>
-              <SectionSubtitle>
-                <Label basic size="large" color="grey">
-                  understanding{" "}
+              <Header>
+                The fastest growing philanthropic vehicle is now available to
+                the DeFi community.
+              </Header>
+            </SectionLabel>
+            <ThreeUp>
+              <SectionWrapper>
+                <CenteredEmojiImage alt="Orgs" src={orgs}></CenteredEmojiImage>
+                <SectionHeader>Orgs receive USDC</SectionHeader>
+                <Subtitle>
+                  Approved grants are safely transferred by{" "}
+                  <span
+                    style={{
+                      fontFamily: "all-round-gothic",
+                      fontWeight: "600",
+                    }}
+                  >
+                    endaoment
+                  </span>{" "}
+                  to verified leadership
+                </Subtitle>
+              </SectionWrapper>
+              <SectionWrapper>
+                <CenteredEmojiImage alt="Taxes" src={tax}></CenteredEmojiImage>
+                <SectionHeader>You minimize taxes</SectionHeader>
+                <Subtitle>
+                  Contribute long-term capital gains holdings without creating
+                  taxable events
+                </Subtitle>
+              </SectionWrapper>
+              <SectionWrapper>
+                <CenteredEmojiImage
+                  alt="Endaoment Fund"
+                  src={endaomentfund}
+                ></CenteredEmojiImage>
+                <SectionHeader>Coming soon...</SectionHeader>
+                <Subtitle>
+                  A community-wide philanthropic fund governed in part by{" "}
                   <span
                     style={{
                       fontFamily: "all-round-gothic",
@@ -120,73 +151,27 @@ class Splash extends React.Component {
                   >
                     endaoment
                   </span>
-                </Label>
-              </SectionSubtitle>
-            </SectionLabel>
-            <SectionWrapper>
-              <CenteredEmojiImage alt="Orgs" src={orgs}></CenteredEmojiImage>
-              <Header>Orgs recieve USDC</Header>
-              <Subtitle>
-                Approved grants are safely transferred by{" "}
-                <span
-                  style={{
-                    fontFamily: "all-round-gothic",
-                    fontWeight: "600",
-                  }}
-                >
-                  endaoment
-                </span>{" "}
-                to the organization's verified leadership
-              </Subtitle>
-            </SectionWrapper>
-            <SectionWrapper>
-              <CenteredEmojiImage alt="Taxes" src={tax}></CenteredEmojiImage>
-              <Header>Minimize your taxes</Header>
-              <Subtitle>
-                Contribute long-term capital gains holdings without creating
-                taxable events
-              </Subtitle>
-            </SectionWrapper>
-            <SectionWrapper>
-              <CenteredEmojiImage
-                alt="Endaoment Fund"
-                src={endaomentfund}
-              ></CenteredEmojiImage>
-              <Header>Coming soon...</Header>
-              <Subtitle>
-                A community philanthropic endowment fund governed in part by{" "}
-                <span
-                  style={{
-                    fontFamily: "all-round-gothic",
-                    fontWeight: "600",
-                  }}
-                >
-                  endaoment
-                </span>
-                's users
-              </Subtitle>
-            </SectionWrapper>
+                  's users
+                </Subtitle>
+              </SectionWrapper>
+            </ThreeUp>
             <SectionWrapper></SectionWrapper>
-            <SectionLabel style={{ width: "80vw", backgroundColor: "white" }}>
-              <SectionSubtitle>
-                <Label basic size="large" color="grey">
-                  contact us
-                </Label>
-              </SectionSubtitle>
-            </SectionLabel>
             <SectionWrapper
               style={{
                 width: "80vw",
                 backgroundColor: "white",
                 margin: "0rem",
+                paddingTop: "3rem",
               }}
             >
-              <SectionHeader basic size="medium" color="grey">
-                Want more?
-              </SectionHeader>
+              <Label basic size="small" color="black">
+                Try Now
+              </Label>
+              <br />
+              <SectionHeader>Ready to give?</SectionHeader>
               <Subtitle>
                 Sign-up for access to the mainnet beta or try out our latest app
-                via the Rinkeby test network
+                on the Rinkeby test network
               </Subtitle>
               <ButtonBlock>
                 <a
@@ -269,12 +254,15 @@ const HomePageWrapper = styled.div`
 `;
 
 const Header = styled.p`
-  font-weight: 400;
+  font-weight: 600;
   font-size: 4rem;
-  margin-top: 3rem;
+  width: 60vw;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   @media only screen and (max-width: 811px) {
-    margin-top: 2rem;
-    padding: 1rem;
+    width: 80vw;
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
     font-size: 2rem;
   }
 `;
@@ -288,27 +276,19 @@ const BigHeader = styled.p`
   @media only screen and (max-width: 768px) {
     margin-top: 1rem;
     font-size: 4rem;
-    padding: 0.5rem;
+    padding: 0.1rem;
   }
 `;
 
 const Subtitle = styled.p`
   font-weight: 400;
   font-size: 1.5rem;
-  margin-top: -3rem;
+  margin: -3rem 0 0 0;
+  max-width: 33vw;
   @media only screen and (max-width: 811px) {
+    max-width: 70vw;
     font-size: 1rem;
-    margin-top: -2rem;
-  }
-`;
-
-const SectionSubtitle = styled.p`
-  margin: 5rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  width: 100vw;
-  @media only screen and (max-width: 811px) {
-    font-size: 1rem;
+    margin: -2rem 0 0 0;
   }
 `;
 
@@ -327,7 +307,7 @@ const LearnMoreWrapper = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 `;
 
 const LeftSectionWrapper = styled.div`
@@ -339,22 +319,20 @@ const LeftSectionWrapper = styled.div`
   justify-content: center;
   text-align: right;
   width: 100vw;
-  padding: 2.5rem;
+  padding: 5rem;
   @media only screen and (max-width: 811px) {
+    padding: 2.5rem;
     text-align: center;
   }
 `;
 const SectionLabel = styled.div`
   display: flex;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   width: 100vw;
-  padding-top: 5rem;
   @media only screen and (max-width: 811px) {
-    text-align: center;
   }
 `;
 
@@ -367,8 +345,9 @@ const RightSectionWrapper = styled.div`
   text-align: left;
   width: 100vw;
   margin: 0rem auto;
-  padding: 2.5rem;
+  padding: 5rem;
   @media only screen and (max-width: 811px) {
+    padding: 2.5rem;
     text-align: center;
   }
 `;
@@ -379,31 +358,33 @@ const SectionWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100vw;
   padding: 2.5rem;
   margin: 2.5rem auto;
   @media only screen and (max-width: 811px) {
-    margin: 1rem auto;
+    padding: 0;
+    margin: 2rem auto;
   }
 `;
 
-const SmallLabel = styled.p`
-  font-family: all-round-gothic;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-top: 3rem;
+const ThreeUp = styled.div`
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80vw;
   @media only screen and (max-width: 811px) {
-    font-size: 1rem;
-    margin-top: 2rem;
+    width: 100vw;
+    flex-direction: column;
   }
 `;
 
 const SectionHeader = styled.p`
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 3rem;
+  padding: 1rem 0;
   @media only screen and (max-width: 811px) {
     font-size: 2rem;
-    padding-bottom: 1rem;
     text-align: center;
   }
 `;
@@ -413,6 +394,9 @@ const ContentWrapper = styled.div`
   width: 500px;
   height: auto;
   max-width: 100vw;
+  @media only screen and (max-width: 811px) {
+    width: 300px;
+  }
 `;
 
 const EmojiImage = styled.img`
