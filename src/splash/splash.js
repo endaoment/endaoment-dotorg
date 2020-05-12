@@ -51,7 +51,8 @@ class Splash extends React.Component {
           <LearnMoreWrapper id="about">
             <SectionLabel style={{ backgroundColor: "white" }}>
               <Header>
-                The easiest way to support your favorite causes with crypto.
+                The fastest growing philanthropic vehicle is coming to the DeFi
+                community.
               </Header>
             </SectionLabel>
             <RightSectionWrapper>
@@ -106,8 +107,8 @@ class Splash extends React.Component {
             <RightSectionWrapper></RightSectionWrapper>
             <SectionLabel>
               <Header>
-                The fastest growing philanthropic vehicle is now available to
-                the DeFi community.
+                Support your favorite causes & organizations in USD while
+                donating crypto in its original form.
               </Header>
             </SectionLabel>
             <ThreeUp>
@@ -162,6 +163,7 @@ class Splash extends React.Component {
                 backgroundColor: "white",
                 margin: "0rem",
                 paddingTop: "3rem",
+                borderRadius: "4px",
               }}
             >
               <Label basic size="small" color="black">
@@ -170,8 +172,8 @@ class Splash extends React.Component {
               <br />
               <SectionHeader>Ready to give?</SectionHeader>
               <Subtitle>
-                Sign-up for access to the mainnet beta or try out our latest app
-                on the Rinkeby test network
+                Sign-up to access the mainnet beta or try our latest app on the
+                Rinkeby test network
               </Subtitle>
               <ButtonBlock>
                 <a
@@ -255,7 +257,7 @@ const HomePageWrapper = styled.div`
 
 const Header = styled.p`
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 3rem;
   width: 60vw;
   padding-top: 10rem;
   padding-bottom: 5rem;
@@ -456,7 +458,6 @@ const FullscreenWrapper = styled.div`
 `;
 const Footer = styled.div`
   background-color: white;
-  box-shadow: 0 15px 30px 1px grey;
   padding: 2rem 0 1rem 0;
   width: 100vw;
   dispay: flex;
