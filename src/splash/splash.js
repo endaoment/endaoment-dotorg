@@ -52,7 +52,7 @@ class Splash extends React.Component {
             <SectionLabel style={{ backgroundColor: "white" }}>
               <Header>
                 The fastest growing philanthropic vehicle is coming to the DeFi
-                community.
+                community
               </Header>
             </SectionLabel>
             <RightSectionWrapper>
@@ -108,7 +108,7 @@ class Splash extends React.Component {
             <SectionLabel>
               <Header>
                 Support your favorite causes & organizations in USD while
-                donating crypto in its original form.
+                donating crypto in its original form
               </Header>
             </SectionLabel>
             <ThreeUp>
