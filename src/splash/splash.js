@@ -22,7 +22,7 @@ class Splash extends React.Component {
             <HeaderLogo alt="endaoment" src={endaoment}></HeaderLogo>
             <BigHeader className="big-header">a better way to give</BigHeader>
             <Subtitle>Smart Contract Donor-Advised Funds</Subtitle>
-            <ButtonBlock>
+            <ButtonBlock style={{ marginTop: "4rem" }}>
               <a
                 className="ui button big green"
                 style={{ margin: ".25rem" }}
@@ -245,6 +245,7 @@ export default Splash;
 
 const HomePageWrapper = styled.div`
   background-color: whitesmoke;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -273,7 +274,6 @@ const BigHeader = styled.p`
   font-family: all-round-gothic;
   font-weight: 400;
   font-size: 5rem;
-  margin-top: 3rem;
   padding: 2rem;
   @media only screen and (max-width: 768px) {
     margin-top: 1rem;
@@ -285,7 +285,7 @@ const BigHeader = styled.p`
 const Subtitle = styled.p`
   font-weight: 400;
   font-size: 1.5rem;
-  margin: -3rem 0 0 0;
+  margin: -3rem 0 0rem 0;
   max-width: 33vw;
   @media only screen and (max-width: 811px) {
     max-width: 70vw;
