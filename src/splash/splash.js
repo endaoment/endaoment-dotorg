@@ -51,8 +51,8 @@ class Splash extends React.Component {
           <LearnMoreWrapper id="about">
             <SectionLabel style={{ backgroundColor: "white" }}>
               <Header>
-                The fastest growing philanthropic vehicle is coming to the DeFi
-                community
+              Support your favorite causes & organizations in USD while
+                donating your crypto in its original form
               </Header>
             </SectionLabel>
             <RightSectionWrapper>
@@ -107,8 +107,8 @@ class Splash extends React.Component {
             <RightSectionWrapper></RightSectionWrapper>
             <SectionLabel>
               <Header>
-                Support your favorite causes & organizations in USD while
-                donating crypto in its original form
+                The fastest growing philanthropic vehicle is coming to the DeFi
+                community
               </Header>
             </SectionLabel>
             <ThreeUp>
