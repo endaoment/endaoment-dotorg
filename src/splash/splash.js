@@ -51,7 +51,7 @@ class Splash extends React.Component {
           <LearnMoreWrapper id="about">
             <SectionLabel style={{ backgroundColor: "white" }}>
               <Header>
-              Support your favorite causes & organizations in USD while
+                Support your favorite causes & organizations in USD while
                 donating your crypto in its original form
               </Header>
             </SectionLabel>
@@ -225,7 +225,7 @@ class Splash extends React.Component {
                 </a>
 
                 <a
-                  href="http://github.com/rheeger/endaoment-client"
+                  href="http://github.com/endaoment"
                   className="ui button compact black"
                   target="blank"
                 >
