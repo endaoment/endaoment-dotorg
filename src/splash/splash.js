@@ -24,6 +24,25 @@ class Splash extends React.Component {
             <Subtitle>Smart Contract Donor-Advised Funds</Subtitle>
             <ButtonBlock style={{ marginTop: "4rem" }}>
               <a
+                className="ui button big purple"
+                style={{ margin: ".25rem" }}
+                target="blank"
+                href="https://discord.gg/9xZCgca"
+              >
+                <i className="discord icon" />
+                Join Discord
+              </a>
+              {typeof window.ethereum !== "undefined" ? (
+                <a
+                  className="ui button big blue"
+                  style={{ margin: ".25rem" }}
+                  href="https://ropsten.endaoment.org"
+                >
+                  <i className="ethereum icon" />
+                  Test on Ropsten
+                </a>
+              ) : null}
+              <a
                 className="ui button big green"
                 style={{ margin: ".25rem" }}
                 target="blank"
@@ -32,16 +51,6 @@ class Splash extends React.Component {
                 <i className="lock open icon" />
                 Request Access
               </a>
-              {typeof window.ethereum !== "undefined" ? (
-                <a
-                  className="ui button big blue"
-                  style={{ margin: ".25rem" }}
-                  href="https://rinkeby.endaoment.org"
-                >
-                  <i className="ethereum icon" />
-                  Test on Rinkeby
-                </a>
-              ) : null}
             </ButtonBlock>
             <BottomButton href="#about" className="ui button basic compact">
               <i className="arrow down icon" />
@@ -173,7 +182,7 @@ class Splash extends React.Component {
               <SectionHeader>Ready to give?</SectionHeader>
               <Subtitle>
                 Sign-up to access the mainnet beta or try our latest app on the
-                Rinkeby test network
+                Ropsten test network
               </Subtitle>
               <ButtonBlock>
                 <a
@@ -189,10 +198,10 @@ class Splash extends React.Component {
                   <a
                     className="ui button big blue"
                     style={{ margin: ".25rem" }}
-                    href="https://rinkeby.endaoment.org"
+                    href="https://ropsten.endaoment.org"
                   >
                     <i className="ethereum icon" />
-                    Test on Rinkeby
+                    Test on Ropsten
                   </a>
                 ) : null}
               </ButtonBlock>
@@ -207,6 +216,15 @@ class Splash extends React.Component {
               />
               <ButtonBlock style={{ padding: "0rem", width: "100vw" }}>
                 <a
+                  className="ui button compact purple"
+                  style={{ margin: ".25rem" }}
+                  target="blank"
+                  href="https://discord.gg/9xZCgca"
+                >
+                  <i className="discord icon" />
+                Join Discord
+              </a>
+                <a
                   href="http://twitter.com/endaomentdotorg"
                   target="blank"
                   className="ui button compact twitter"
@@ -216,14 +234,13 @@ class Splash extends React.Component {
                 </a>
 
                 <a
-                  href="http://medium.com/endaomentdotorg"
-                  className="ui button compact disabled"
+                  href="http://docs.endaoment.org"
+                  className="ui button compact "
                   target="blank"
                 >
-                  <i className="medium m icon"></i>
-                  Read More
+                  <i className="file alternate outline icon"></i>
+                  Read Docs
                 </a>
-
                 <a
                   href="http://github.com/endaoment"
                   className="ui button compact black"
