@@ -25,17 +25,26 @@ class Splash extends React.Component {
             <ButtonBlock style={{ marginTop: "4rem" }}>
               <a
                 className="ui button big purple"
-                style={{ margin: ".25rem" }}
+                style={{ margin: ".5rem" }}
                 target="blank"
                 href="https://discord.gg/9xZCgca"
               >
                 <i className="discord icon" />
                 Join Discord
               </a>
+              <a
+                className="ui button big"
+                style={{ margin: ".5rem" }}
+                target="blank"
+                href="https://docs.endaoment.org/"
+              >
+                <i className="file alternate outline icon" />
+                Read Docs
+              </a>
               {typeof window.ethereum !== "undefined" ? (
                 <a
                   className="ui button big blue"
-                  style={{ margin: ".25rem" }}
+                  style={{ margin: ".5rem" }}
                   href="https://ropsten.endaoment.org"
                 >
                   <i className="ethereum icon" />
@@ -44,7 +53,7 @@ class Splash extends React.Component {
               ) : null}
               <a
                 className="ui button big green"
-                style={{ margin: ".25rem" }}
+                style={{ margin: ".5rem" }}
                 target="blank"
                 href="./signup"
               >
@@ -61,7 +70,7 @@ class Splash extends React.Component {
             <SectionLabel style={{ backgroundColor: "white" }}>
               <Header>
                 Support your favorite causes & organizations in USD while
-                donating your crypto in its original form
+                donating your crypto in its original form.
               </Header>
             </SectionLabel>
             <RightSectionWrapper>
@@ -85,7 +94,7 @@ class Splash extends React.Component {
                 </Label>
                 <SectionHeader>Give crypto</SectionHeader>
                 <Subtitle>
-                  Contribute any token with a Uniswap exchange contract to your
+                  Contribute most tokens with a Uniswap exchange contract to your
                   fund and{" "}
                   <span
                     style={{
@@ -117,7 +126,7 @@ class Splash extends React.Component {
             <SectionLabel>
               <Header>
                 The fastest growing philanthropic vehicle is coming to the DeFi
-                community
+                community.
               </Header>
             </SectionLabel>
             <ThreeUp>
@@ -185,25 +194,25 @@ class Splash extends React.Component {
                 Ropsten test network
               </Subtitle>
               <ButtonBlock>
-                <a
-                  className="ui button big green"
-                  style={{ margin: ".25rem" }}
-                  target="blank"
-                  href="./signup"
-                >
-                  <i className="lock open icon" />
-                  Request Access
-                </a>
                 {typeof window.ethereum !== "undefined" ? (
                   <a
                     className="ui button big blue"
-                    style={{ margin: ".25rem" }}
+                    style={{ margin: ".5rem" }}
                     href="https://ropsten.endaoment.org"
                   >
                     <i className="ethereum icon" />
                     Test on Ropsten
                   </a>
                 ) : null}
+                <a
+                  className="ui button big green"
+                  style={{ margin: ".5rem" }}
+                  target="blank"
+                  href="./signup"
+                >
+                  <i className="lock open icon" />
+                  Request Access
+                </a>
               </ButtonBlock>
             </SectionWrapper>
           </LearnMoreWrapper>
@@ -217,12 +226,19 @@ class Splash extends React.Component {
               <ButtonBlock style={{ padding: "0rem", width: "100vw" }}>
                 <a
                   className="ui button compact purple"
-                  style={{ margin: ".25rem" }}
                   target="blank"
                   href="https://discord.gg/9xZCgca"
                 >
                   <i className="discord icon" />
-                Join Discord
+                Discord
+                </a>
+                <a
+                  href="http://docs.endaoment.org"
+                  className="ui button compact"
+                  target="blank"
+                >
+                  <i className="file alternate outline icon"></i>
+                Docs
               </a>
                 <a
                   href="http://twitter.com/endaomentdotorg"
@@ -230,26 +246,19 @@ class Splash extends React.Component {
                   className="ui button compact twitter"
                 >
                   <i className="twitter icon"></i>
-                  Follow
-                </a>
-
-                <a
-                  href="http://docs.endaoment.org"
-                  className="ui button compact "
-                  target="blank"
-                >
-                  <i className="file alternate outline icon"></i>
-                  Read Docs
-                </a>
+                Follow
+              </a>
                 <a
                   href="http://github.com/endaoment"
                   className="ui button compact black"
                   target="blank"
                 >
                   <i className="github icon"></i>
-                  GitHub
-                </a>
+                GitHub
+              </a>
               </ButtonBlock>
+              <br />
+              <p>	&copy; 2020, Endaoment</p>
             </SectionWrapper>
           </Footer>
         </HomePageWrapper>
@@ -260,17 +269,103 @@ class Splash extends React.Component {
 
 export default Splash;
 
+
+
 const HomePageWrapper = styled.div`
   background-color: whitesmoke;
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  width: 100%;
+  padding: 0 2rem;
+  width: 100vw;
   box-sizing: border-box;
+  @media only screen and (max-width: 1000px) {
+    padding: 0rem;
+  }
+`;
+
+const FullscreenWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1400px;
+  text-align: center;
+  margin-top: 20vh;
+  padding: 0 1rem;
+  @media only screen and (max-width: 1000px) {
+    height: 100vh;
+    justify-content: center;
+    margin-top: 0rem;
+  }
+`;
+
+const LearnMoreWrapper = styled.div`
+  background-color: whitesmoke;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10rem;
+`;
+
+const LeftSectionWrapper = styled.div`
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  width: 100vw;
+  padding: 5rem;
+  @media only screen and (max-width: 1000px) {
+    padding: 2.5rem;
+    text-align: center;
+  }
+`;
+
+const SectionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+  margin: 2.5rem auto;
+  @media only screen and (max-width: 1000px) {
+    padding: 0;
+    margin: 2rem auto;
+  }
+`;
+
+const RightSectionWrapper = styled.div`
+  background-color: white;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 100vw;
+  margin: 0rem auto;
+  padding: 5rem;
+  @media only screen and (max-width: 1000px) {
+    padding: 2.5rem;
+    text-align: center;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  padding: 1rem;
+  width: 500px;
+  height: auto;
+  max-width: 100vw;
+  @media only screen and (max-width: 1000px) {
+    width: 300px;
+  }
 `;
 
 const Header = styled.p`
@@ -279,7 +374,7 @@ const Header = styled.p`
   width: 60vw;
   padding-top: 10rem;
   padding-bottom: 5rem;
-  @media only screen and (max-width: 811px) {
+  @media only screen and (max-width: 1000px) {
     width: 80vw;
     padding-top: 7.5rem;
     padding-bottom: 5rem;
@@ -304,7 +399,7 @@ const Subtitle = styled.p`
   font-size: 1.5rem;
   margin: -3rem 0 0rem 0;
   max-width: 33vw;
-  @media only screen and (max-width: 811px) {
+  @media only screen and (max-width: 1000px) {
     max-width: 70vw;
     font-size: 1rem;
     margin: -2rem 0 0 0;
@@ -316,34 +411,9 @@ const ButtonBlock = styled.div`
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
+  margin: 2rem;
 `;
 
-const LearnMoreWrapper = styled.div`
-  background-color: whitesmoke;
-  width: 100vw;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10rem;
-`;
-
-const LeftSectionWrapper = styled.div`
-  background-color: white;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: right;
-  width: 100vw;
-  padding: 5rem;
-  @media only screen and (max-width: 811px) {
-    padding: 2.5rem;
-    text-align: center;
-  }
-`;
 const SectionLabel = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -351,37 +421,7 @@ const SectionLabel = styled.div`
   justify-content: center;
   text-align: left;
   width: 100vw;
-  @media only screen and (max-width: 811px) {
-  }
-`;
-
-const RightSectionWrapper = styled.div`
-  background-color: white;
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  width: 100vw;
-  margin: 0rem auto;
-  padding: 5rem;
-  @media only screen and (max-width: 811px) {
-    padding: 2.5rem;
-    text-align: center;
-  }
-`;
-
-const SectionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2.5rem;
-  margin: 2.5rem auto;
-  @media only screen and (max-width: 811px) {
-    padding: 0;
-    margin: 2rem auto;
+  @media only screen and (max-width: 1000px) {
   }
 `;
 
@@ -392,7 +432,7 @@ const ThreeUp = styled.div`
   align-items: center;
   text-align: center;
   width: 80vw;
-  @media only screen and (max-width: 811px) {
+  @media only screen and (max-width: 1000px) {
     width: 100vw;
     flex-direction: column;
   }
@@ -402,19 +442,9 @@ const SectionHeader = styled.p`
   font-weight: 400;
   font-size: 3rem;
   padding: 1rem 0;
-  @media only screen and (max-width: 811px) {
+  @media only screen and (max-width: 1000px) {
     font-size: 2rem;
     text-align: center;
-  }
-`;
-
-const ContentWrapper = styled.div`
-  padding: 1rem;
-  width: 500px;
-  height: auto;
-  max-width: 100vw;
-  @media only screen and (max-width: 811px) {
-    width: 300px;
   }
 `;
 
@@ -424,7 +454,7 @@ const EmojiImage = styled.img`
   padding: 0 0.5rem;
   max-width: 30rem;
   margin-left: 4rem;
-  @media only screen and (max-width: 811px) {
+  @media only screen and (max-width: 1000px) {
     margin-left: 0;
   }
 `;
@@ -432,8 +462,8 @@ const CenteredEmojiImage = styled.img`
   width: 100vw;
   height: auto;
   padding: 0 0.5rem;
-  max-width: 30rem;
-  @media only screen and (max-width: 811px) {
+  max-width: 22rem;
+  @media only screen and (max-width: 1000px) {
     margin-left: 0;
   }
 `;
@@ -441,7 +471,7 @@ const CenteredEmojiImage = styled.img`
 const BottomButton = styled.a`
   margin: 0 auto;
 
-  @media only screen and (min-width: 811px) {
+  @media only screen and (min-width: 1000px) {
     position: absolute;
     bottom: calc(100% - 100vh + 5rem);
   }
@@ -453,26 +483,7 @@ const HeaderLogo = styled.img`
   max-width: 15rem;
 `;
 
-const FullscreenWrapper = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  max-width: 1400px;
-  text-align: center;
-  margin-top: 20vh;
 
-  @media only screen and (max-width: 811px) {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 0rem;
-  }
-`;
 const Footer = styled.div`
   background-color: white;
   padding: 2rem 0 1rem 0;
