@@ -2,3 +2,5 @@
 runtime: nodejs10
 env: standard
 # [END runtime]
+
+service: default
