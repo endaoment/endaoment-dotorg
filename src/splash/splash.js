@@ -20,7 +20,7 @@ class Splash extends React.Component {
         <HomePageWrapper>
           <FullscreenWrapper>
             <HeaderLogo alt="endaoment" src={endaoment}></HeaderLogo>
-            <BigHeader className="big-header">a better way to give</BigHeader>
+            <BigHeader>Give crypto. Grant dollars.</BigHeader>
             <Subtitle>Smart Contract Donor-Advised Funds</Subtitle>
             <ButtonBlock style={{ marginTop: "4rem" }}>
               <a
@@ -51,15 +51,6 @@ class Splash extends React.Component {
                   Test on Ropsten
                 </a>
               ) : null}
-              <a
-                className="ui button big green"
-                style={{ margin: ".5rem" }}
-                target="blank"
-                href="./signup"
-              >
-                <i className="lock open icon" />
-                Request Access
-              </a>
             </ButtonBlock>
             <BottomButton href="#about" className="ui button basic compact">
               <i className="arrow down icon" />
@@ -94,7 +85,7 @@ class Splash extends React.Component {
                 </Label>
                 <SectionHeader>Give crypto</SectionHeader>
                 <Subtitle>
-                  Contribute most tokens with a Uniswap exchange contract to your
+                  Contribute ETH or ERC20 tokens to your
                   fund and{" "}
                   <span
                     style={{
@@ -116,9 +107,8 @@ class Splash extends React.Component {
                 </Label>
                 <SectionHeader>Recommend grants</SectionHeader>
                 <Subtitle>
-                  Use the proceeds of your contributions to make grant
-                  recommendations to any non-profit organization (some
-                  restrictions apply)
+                  Use the USDC proceeds from your donation to make grant
+                  recommendations to nearly any non-profit organization
                 </Subtitle>
               </ContentWrapper>
             </RightSectionWrapper>
@@ -151,7 +141,7 @@ class Splash extends React.Component {
                 <SectionHeader>You minimize taxes</SectionHeader>
                 <Subtitle>
                   Contribute long-term capital gains holdings without creating
-                  taxable events
+                  taxable events*
                 </Subtitle>
               </SectionWrapper>
               <SectionWrapper>
@@ -190,7 +180,7 @@ class Splash extends React.Component {
               <br />
               <SectionHeader>Ready to give?</SectionHeader>
               <Subtitle>
-                Sign-up to access the mainnet beta or try our latest app on the
+                Contact our team using the link below or try our latest app on the
                 Ropsten test network
               </Subtitle>
               <ButtonBlock>
@@ -210,8 +200,8 @@ class Splash extends React.Component {
                   target="blank"
                   href="./signup"
                 >
-                  <i className="lock open icon" />
-                  Request Access
+                  <i className="envelope icon" />
+                  Get in Touch
                 </a>
               </ButtonBlock>
             </SectionWrapper>
@@ -258,7 +248,9 @@ class Splash extends React.Component {
               </a>
               </ButtonBlock>
               <br />
-              <p>	&copy; 2020, Endaoment</p>
+              <p style={{ color: "gray", maxWidth: "60vw" }}>	&copy; 2020, Endaoment</p>
+              <p style={{ fontStyle: "italic", color: "gray", maxWidth: "60vw" }}>*Endaoment does not provide tax advice. Please consult with a licensed tax professional to further understand the impact of opening and contributing to a Donor-Advised Fund.</p>
+
             </SectionWrapper>
           </Footer>
         </HomePageWrapper>
@@ -383,7 +375,6 @@ const Header = styled.p`
 `;
 
 const BigHeader = styled.p`
-  font-family: all-round-gothic;
   font-weight: 400;
   font-size: 5rem;
   padding: 2rem;
