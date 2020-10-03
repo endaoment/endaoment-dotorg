@@ -13,7 +13,7 @@ import endaomentfund from "../assets/images/endaomentfund.png";
 
 class Splash extends React.Component {
   render() {
-    ReactGA.initialize("UA-164846205-1");
+    ReactGA.initialize("UA-179546802-4");
     ReactGA.pageview(window.location.pathname + window.location.search);
     return (
       <div>
