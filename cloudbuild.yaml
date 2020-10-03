@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', '--no-promote', '--version', '$SHORT_SHA', 'app.yaml']
+  timeout: '2000s'
+  id: dotorg-deploy
+
+timeout: 3600s
