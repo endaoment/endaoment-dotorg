@@ -290,7 +290,7 @@ const FullscreenWrapper = styled.div`
   @media only screen and (max-width: 1000px) {
     height: 100vh;
     justify-content: center;
-    margin-top: 0rem;
+    margin-top: 3rem;
   }
 `;
 
