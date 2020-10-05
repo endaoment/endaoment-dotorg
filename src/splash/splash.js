@@ -122,7 +122,7 @@ class Splash extends React.Component {
             <RightSectionWrapper></RightSectionWrapper>
             <SectionLabel>
               <Header>
-                The fastest growing philanthropic vehicle is coming to the DeFi
+                The fastest-growing philanthropic vehicle is coming to the DeFi
                 community.
               </Header>
             </SectionLabel>
