@@ -13,7 +13,7 @@ import endaomentfund from "../assets/images/endaomentfund.png";
 
 class Splash extends React.Component {
   render() {
-    ReactGA.initialize("UA-164846205-1");
+    ReactGA.initialize("UA-179546802-4");
     ReactGA.pageview(window.location.pathname + window.location.search);
     return (
       <div>
@@ -21,7 +21,16 @@ class Splash extends React.Component {
           <FullscreenWrapper>
             <HeaderLogo alt="endaoment" src={endaoment}></HeaderLogo>
             <BigHeader>Give crypto. Grant dollars.</BigHeader>
-            <Subtitle>Smart Contract Donor-Advised Funds</Subtitle>
+            <Subtitle style={{ maxWidth: "70vw" }}>A new Community Foundation offering smart contract-powered Donor-Advised Funds.</Subtitle>
+            <a
+              className="ui button massive green"
+              style={{ marginTop: "5rem", marginBottom: "-2rem" }}
+              target="blank"
+              href="https://app.endaoment.org"
+            >
+              <i className="arrow right icon" style={{ marginLeft: "-.5rem", marginRight: "1rem" }} />
+                Launch App
+              </a>
             <ButtonBlock style={{ marginTop: "4rem" }}>
               <a
                 className="ui button big purple"
@@ -39,23 +48,18 @@ class Splash extends React.Component {
                 href="https://docs.endaoment.org/"
               >
                 <i className="file alternate outline icon" />
-                Read Docs
+                Learn More
               </a>
-              {typeof window.ethereum !== "undefined" ? (
-                <a
-                  className="ui button big blue"
-                  style={{ margin: ".5rem" }}
-                  href="https://ropsten.endaoment.org"
-                >
-                  <i className="ethereum icon" />
-                  Test on Ropsten
-                </a>
-              ) : null}
+              <a
+                className="ui button big blue"
+                style={{ margin: ".5rem" }}
+                target="blank"
+                href="https://ropsten.endaoment.org/"
+              >
+                <i className="ethereum icon" />
+                Test on Ropsten
+              </a>
             </ButtonBlock>
-            <BottomButton href="#about" className="ui button basic compact">
-              <i className="arrow down icon" />
-              Learn More
-            </BottomButton>
           </FullscreenWrapper>
           <LearnMoreWrapper id="about">
             <SectionLabel style={{ backgroundColor: "white" }}>
@@ -84,19 +88,22 @@ class Splash extends React.Component {
                   STEP 2
                 </Label>
                 <SectionHeader>Give crypto</SectionHeader>
-                <Subtitle>
-                  Contribute ETH or ERC20 tokens to your
+                <LeftMarginAdjust>
+
+                  <Subtitle>
+                    Contribute ETH or ERC20 tokens to your
                   fund and{" "}
-                  <span
-                    style={{
-                      fontFamily: "all-round-gothic",
-                      fontWeight: "600",
-                    }}
-                  >
-                    endaoment
+                    <span
+                      style={{
+                        fontFamily: "all-round-gothic",
+                        fontWeight: "600",
+                      }}
+                    >
+                      endaoment
                   </span>{" "}
                   will convert it to USDC
                 </Subtitle>
+                </LeftMarginAdjust>
               </ContentWrapper>
             </LeftSectionWrapper>
             <RightSectionWrapper>
@@ -115,7 +122,7 @@ class Splash extends React.Component {
             <RightSectionWrapper></RightSectionWrapper>
             <SectionLabel>
               <Header>
-                The fastest growing philanthropic vehicle is coming to the DeFi
+                The fastest-growing philanthropic vehicle is coming to the DeFi
                 community.
               </Header>
             </SectionLabel>
@@ -149,9 +156,9 @@ class Splash extends React.Component {
                   alt="Endaoment Fund"
                   src={endaomentfund}
                 ></CenteredEmojiImage>
-                <SectionHeader>Coming soon...</SectionHeader>
+                <SectionHeader>Get Involved</SectionHeader>
                 <Subtitle>
-                  A community-wide philanthropic fund governed in part by{" "}
+                  We'll be launching a community-wide philanthropic fund governed in part by{" "}
                   <span
                     style={{
                       fontFamily: "all-round-gothic",
@@ -180,39 +187,43 @@ class Splash extends React.Component {
               <br />
               <SectionHeader>Ready to give?</SectionHeader>
               <Subtitle>
-                Contact our team using the link below or try our latest app on the
-                Ropsten test network
+                Create a Fund today using our application, learn more from our documentation, or test our latest build on Ropsten
               </Subtitle>
               <ButtonBlock>
                 {typeof window.ethereum !== "undefined" ? (
                   <a
-                    className="ui button big blue"
+                    className="ui button big green"
                     style={{ margin: ".5rem" }}
-                    href="https://ropsten.endaoment.org"
+                    href="https://app.endaoment.org"
                   >
-                    <i className="ethereum icon" />
-                    Test on Ropsten
+                    <i className="arrow right icon" style={{ marginLeft: "-.5rem", marginRight: "1rem" }} />
+                    Launch App
                   </a>
                 ) : null}
                 <a
-                  className="ui button big green"
+                  className="ui button big"
                   style={{ margin: ".5rem" }}
                   target="blank"
-                  href="./signup"
+                  href="https://docs.endaoment.org"
                 >
-                  <i className="envelope icon" />
-                  Get in Touch
+                  <i className="file outline alternate icon" />
+                  Learn More
                 </a>
+                <a
+                  className="ui button big blue"
+                  style={{ margin: ".5rem" }}
+                  target="blank"
+                  href="https://ropsten.endaoment.org/"
+                >
+                  <i className="ethereum icon" />
+                Test on Ropsten
+              </a>
               </ButtonBlock>
             </SectionWrapper>
           </LearnMoreWrapper>
           <Footer>
-            <SectionWrapper style={{ padding: "0rem" }}>
-              <CenteredEmojiImage
-                alt="endaoment"
-                style={{ maxWidth: "10rem", margin: "0 auto" }}
-                src={endaoment}
-              />
+            <SectionWrapper style={{ padding: "0rem", margin: "1rem" }}>
+              <p style={{ color: "gray", maxWidth: "60vw" }}>	&copy; 2020, Endaoment</p>
               <ButtonBlock style={{ padding: "0rem", width: "100vw" }}>
                 <a
                   className="ui button compact purple"
@@ -247,8 +258,6 @@ class Splash extends React.Component {
                 GitHub
               </a>
               </ButtonBlock>
-              <br />
-              <p style={{ color: "gray", maxWidth: "60vw" }}>	&copy; 2020, Endaoment</p>
               <p style={{ fontStyle: "italic", color: "gray", maxWidth: "60vw" }}>*Endaoment does not provide tax advice. Please consult with a licensed tax professional to further understand the impact of opening and contributing to a Donor-Advised Fund.</p>
 
             </SectionWrapper>
@@ -278,14 +287,14 @@ const HomePageWrapper = styled.div`
 `;
 
 const FullscreenWrapper = styled.div`
-  height: 100vh;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   max-width: 1400px;
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
   padding: 0 1rem;
   @media only screen and (max-width: 1000px) {
     height: 100vh;
@@ -304,6 +313,13 @@ const LearnMoreWrapper = styled.div`
   padding-bottom: 10rem;
 `;
 
+const LeftMarginAdjust = styled.div`
+margin: -3rem 0 -2rem 3rem;
+@media only screen and (max-width: 1000px) {
+  margin: -2rem auto
+
+}
+`
 const LeftSectionWrapper = styled.div`
   background-color: white;
   display: flex;
@@ -363,7 +379,7 @@ const ContentWrapper = styled.div`
 const Header = styled.p`
   font-weight: 600;
   font-size: 3rem;
-  width: 60vw;
+  width: 70vw;
   padding-top: 10rem;
   padding-bottom: 5rem;
   @media only screen and (max-width: 1000px) {
@@ -422,7 +438,7 @@ const ThreeUp = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 80vw;
+  width: 90vw;
   @media only screen and (max-width: 1000px) {
     width: 100vw;
     flex-direction: column;
@@ -431,7 +447,7 @@ const ThreeUp = styled.div`
 
 const SectionHeader = styled.p`
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 1rem 0;
   @media only screen and (max-width: 1000px) {
     font-size: 2rem;
@@ -464,7 +480,7 @@ const BottomButton = styled.a`
 
   @media only screen and (min-width: 1000px) {
     position: absolute;
-    bottom: calc(100% - 100vh + 5rem);
+    bottom: calc(100% - 100vh + 3rem);
   }
 `;
 
