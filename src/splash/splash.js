@@ -223,7 +223,7 @@ class Splash extends React.Component {
           </LearnMoreWrapper>
           <Footer>
             <SectionWrapper style={{ padding: "0rem", margin: "1rem" }}>
-              <p style={{ color: "gray", maxWidth: "60vw" }}>	&copy; 2020, Endaoment</p>
+              <p style={{ color: "gray", maxWidth: "60vw" }}>	&copy; {`${new Date().getFullYear()}`}, Endaoment</p>
               <ButtonBlock style={{ padding: "0rem", width: "100vw" }}>
                 <a
                   className="ui button compact purple"
