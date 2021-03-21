@@ -11,6 +11,7 @@ function App() {
     <HttpsRedirect>
       <Router history={history}>
         <Switch>
+          {window.location.replace("https://app.endaoment.org")}
           <Route path="/" exact component={Splash} />
           <Route path="/signup" exact component={SignUp} />
         </Switch>
